@@ -4,4 +4,4 @@
 2. run `npm i`.
 3. run `npm run start`.
 
-https://theoriaarhidoxa.github.io/katas-v2/
+https://theoriaarhidoxa.github.io/Fake-Store-API-TypeScript/

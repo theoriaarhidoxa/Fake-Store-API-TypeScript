@@ -1,0 +1,195 @@
+.wrapper {
+  padding: 30px 0;
+
+  &__header {
+    p {
+      text-align: center;
+      margin: 0 10px 40px;
+    }
+  }
+
+  &__list {
+    margin: 30px auto;
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 80rem;
+
+    &-item {
+      width: calc(25% - 30px);
+      margin: 0 15px 30px;
+      border: 1px solid #ccc;
+      box-shadow: 3px 4px 5px #ccc;
+      padding: 20px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+
+      p {
+        flex-grow: 1;
+      }
+
+      img {
+        display: block;
+        height: 200px;
+        max-width: 100%;
+        margin: 30px auto;
+        transition: transform .5s ease;
+        border-radius: 5px;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+
+      span {
+        cursor: auto;
+        background-color: #a0a0a0;
+        color: #fff;
+        padding: 5px;
+        border-radius: 4px;
+        align-self: flex-end;
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__item {
+    max-width: 37rem;
+    margin: 0 auto;
+
+    &-credentials {
+      display: flex;
+      align-items: center;
+      margin: 0 0 40px;
+
+      h1 {
+        font: 19px 'Tahoma';
+        margin: 0 20px;
+      }
+    }
+
+    &-data {
+      display: flex;
+
+      img {
+        margin: 0 30px 20px 0;
+        max-width: 200px;
+      }
+
+      div {
+        width: calc(100% - 230px);
+
+        table {
+          width: 100%;
+
+          th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+            font-size: 12px;
+            vertical-align: top;
+          }
+
+          th {
+            width: 40%;
+          }
+
+          td {
+            p {
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              width: 200px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 2px 24px;
+  font: 15px/30px 'Tahoma';
+  background-color: #169bd5;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 1px 2px 2px #aaa;
+  transition: background-color .3s ease;
+  text-decoration: none;
+  border: none;
+
+  &:hover {
+    background-color: darkblue;
+  }
+}
+
+
+@media (max-width: 1200px) {
+  body {
+    .wrapper {
+      &__list {
+        &-item {
+          width: calc(33% - 30px);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  body {
+    .wrapper {
+      &__list {
+        &-item {
+          width: calc(50% - 30px);
+        }
+      }
+
+      &__item {
+
+        &-credentials {
+          flex-direction: column;
+
+          .btn {margin-bottom: 20px;}
+        }
+
+        &-data {
+          flex-direction: column;
+          padding: 0 20px;
+
+          img {
+            margin: 0 0 40px;
+            max-width: 100%;
+          }
+
+          div {
+            width: 100%;
+
+
+            table {
+              td {
+                p {
+                  white-space: normal; width: auto;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    .wrapper {
+      &__list {
+        &-item {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
